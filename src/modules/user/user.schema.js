@@ -13,6 +13,16 @@ const userSchema = new mongoose.Schema(
             required: true,
             unique: false,
         },
+        longitude: {
+            type: Number,
+            required: true,
+            unique: false,
+        },
+        latitude: {
+            type: Number,
+            required: true,
+            unique: false,
+        },
         about: {
             type: String,
             required: false,
