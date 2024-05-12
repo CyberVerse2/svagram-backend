@@ -3,33 +3,38 @@ import { hashData } from '../../common/utils/helper.js'
 
 const userSchema = new mongoose.Schema(
     {
-        username: {
+        firstname: {
             type: String,
             required: true,
             unique: false,
+        },
+        lastname: {
+            type: String,
+            required: true,
+            unique: false,
+        },
+        about: {
+            type: String,
+            required: false,
         },
         email: {
             type: String,
             required: true,
             unique: true,
         },
-
+        aboutHeading: {
+            type: String,
+            required: false,
+        },
+        aboutContent: {
+            type: String,
+            required: false,
+        },
         password: {
             type: String,
             required: true,
             unique: false,
         },
-        refreshToken: {
-            type: String,
-            required: false,
-        },
-
-        quizzes: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'Quiz',
-            },
-        ],
         lastLogin: {
             type: Date,
             required: true,
